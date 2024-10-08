@@ -9,7 +9,7 @@ def etl_generate_stations():
         for row in reader:
             row['lines'] = eval(row['line'])  # Avaliar a string como lista
             row['neighbors'] = eval(row['neigh'])
-            del row['lines']
+            del row['line']
             del row['neigh']
             stations.append(row)
     

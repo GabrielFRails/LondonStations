@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization with Graphology and Sigma.js</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sigmajs@2.0.0-beta.16/build/sigma.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/graphology/0.25.4/graphology.umd.min.js"></script>
+</head>
+<body>
+    <h1 class="title">Estações do Metrô de São Paulo</h1>
+    <main class="content">
+        <div id="graph-container"></div>
+        <aside>
+            <div class="instructions">
+                <h3>
+                    Como interagir:
+                </h3>
+                <ul>
+                    <li>Clique e arraste o grafo para mudar a posição</li>
+                    <li>Use o scroll do mouse para aumentar e diminuir o zoom</li>
+                    <li>Clique em duas estações para ver o caminho mais curto entre elas</li>
+                    <li>Para remover a seleção, clique na estação selecionada</li>
+                </ul>
+            </div>
+            <div class="selected">
+                <div class="station">
+                    <p id="station1">Estação 1: </p>
+                </div>
+                <div class="station">
+                    <p id="station2">Estação 2: </p>
+                </div>
+                <div id="path">
+
+                </div>
+            </div>
+        </aside>
+        </main>
+    <footer class="footer">
+        <small>Made by Tallya Barbosa, Gabriel Freitas e Luiza Oliveira</small>
+    </footer>
+    <script src="js/makePath.js"></script>
+    <script src="js/renderGraph.js"></script>
+</body>
+</html>

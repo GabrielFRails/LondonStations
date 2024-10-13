@@ -1,6 +1,7 @@
 # Copyright (c) 2024, Gabriel Freitas
 
 import csv
+import json
 
 def etl_generate_stations():
     stations = []
@@ -9,6 +10,8 @@ def etl_generate_stations():
         for row in reader:
             row['lines'] = eval(row['line'])  # Avaliar a string como lista
             row['neighbors'] = eval(row['neigh'])
+            row['lat'] = eval(row['lat'].replace(",", "."))
+            row['lon'] = eval(row['lon'].replace(",", "."))
             del row['line']
             del row['neigh']
             stations.append(row)
@@ -29,5 +32,7 @@ def etl_get_stations():
     if not __stations:
         __stations = etl_generate_stations()
     
-    return __stations
+    with open("stations.json", "w", encoding='utf-8') as out:
+        json.dump(__stations, out, ensure_ascii=False, indent=4)
 
+etl_get_stations()

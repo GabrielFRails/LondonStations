@@ -71,6 +71,8 @@ async function createSigmaInstance() {
         container
     );
 
+    window.graph = graph
+
     createEventListeners()
 }
 

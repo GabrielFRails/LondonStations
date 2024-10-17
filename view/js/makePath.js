@@ -27,7 +27,7 @@ function handleClick(node) {
         const start = stations.find(s => s.station == selectedStations[0])
         const end = stations.find(s => s.station == selectedStations[1])
 
-        const path = getShortestPath(start, end)
+        const path = getShortestPath(start, end).map(n => n.name).join(' > ')
         const pathDiv = document.getElementById('path')
         pathDiv.innerHTML = `<p>O caminho mais curto entre as estações selecionadas é: <br/> ${path}</p>`
     }
@@ -74,7 +74,7 @@ function getShortestPath(start, end) {
         const node = path[path.length - 1];
 
         if (node.station === end.station) {
-            return path.map(n => n.name).join(' > ')
+            return path
         }
 
         if (!visited.has(node)) {

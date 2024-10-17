@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graph Visualization with Graphology and Sigma.js</title>
+    <title>Estações do Metrô de SP</title>
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sigmajs@2.0.0-beta.16/build/sigma.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
@@ -13,7 +13,7 @@
     <h1 class="title">Estações do Metrô de São Paulo</h1>
     <main class="content">
         <div id="graph-container"></div>
-        <aside>
+        <aside class="side-info">
             <div class="instructions">
                 <h3>
                     Como interagir:
@@ -26,6 +26,8 @@
                 </ul>
             </div>
             <div class="selected">
+                <h3>Sua seleção</h3>
+                <hr/>
                 <div class="station">
                     <p id="station1">Estação 1: </p>
                 </div>
@@ -35,7 +37,7 @@
                 <div id="path">
 
                 </div>
-                <button type="button" id="clearBtn">Limpar</button>
+                <button type="button" id="clearBtn">Limpar seleção</button>
             </div>
         </aside>
         </main>

@@ -4,16 +4,17 @@ function getClickEvents() {
     renderer.on('clickNode', ({node}) => {
         handleClick(node)
     })
+    document.getElementById("clearBtn")
+        .addEventListener("click", function() { 
+            clearSelectedPath() 
+        });
 }
 
 function handleClick(node) {    
     let station = stations.find(s => s.station == node)
 
     if(selectedStations.includes(node)) {
-        if(twoStationsSelected()) {
-            const pathDiv = document.getElementById('path')
-            pathDiv.innerHTML = ''
-        }
+        if(twoStationsSelected()) clearPath()
         removeStation(station)
         return
     }
@@ -89,6 +90,20 @@ function getShortestPath(start, end) {
     }
 
     return null;
+}
+
+function clearSelectedPath() {
+    const selectedStationsCopy = Object.assign([], selectedStations)
+    for(const stationName of selectedStationsCopy) {
+        let station = stations.find(s => s.station == stationName)
+        removeStation(station)
+    }
+    clearPath()
+}
+
+function clearPath() {
+    const pathDiv = document.getElementById('path')
+    pathDiv.innerHTML = ''
 }
 
 function createEventListeners() {

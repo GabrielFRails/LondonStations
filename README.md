@@ -24,3 +24,5 @@
 	- Elas servem para que a pessoa consiga visualizar e associar as informações sobre as estações e suas linhas a partir das leis de gestalt como semelhança e proximidade.
 5. discussão e definição das interações promovidas pelas visualizações, se houver.
 	- ao selecionar duas estações os caminhos possíveis entre elas é destacado/sugerido
+
+obs.: a pergunta 2 da Etapa 2 foi respondida na pergunta 5 da Etapa 2

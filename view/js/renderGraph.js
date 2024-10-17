@@ -32,7 +32,7 @@ function addGraphNodes(graph, stations) {
         graph.addNode(station.station, {
             label: station.name,
             color: getNodeColor(station.lines),
-            size: 10,  // Set default size for nodes,
+            size: 8,  // Set default size for nodes,
             x: station.lat,
             y: station.lon,
         });

@@ -6,7 +6,9 @@
 - Gabriel Freitas
 
 ## Para executar o programa faça:
- - Vá até o arquivo view/index.html e o execute através da extensão do VS Code através da extensão Live Server
+ - Acesse a pasta do projeto e execute o script `exec.sh` (Linux) ou `exec.bat` (Windows) - é necessário possuir o Python instalado
+ - Também foi disponibilizado um Dockerfile caso prefira realizar a execução via Docker
+ - Após a execução dos scripts, acesse `http://localhost:8000`
 
 ### Etapa 1 em sala
 

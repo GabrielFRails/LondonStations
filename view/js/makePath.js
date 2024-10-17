@@ -28,7 +28,7 @@ function handleClick(node) {
         const end = stations.find(s => s.station == selectedStations[1])
 
         const path = getShortestPath(start, end).map(n => n.name)
-        const pathStr = path.join(' > ')
+        const pathStr = path.map(p => `<strong>${p}</strong>`).join(' > ')
         const pathDiv = document.getElementById('path')
         pathDiv.innerHTML = `<p>O caminho mais curto entre as estações selecionadas é: <br/> ${pathStr}</p>`
 
@@ -41,14 +41,12 @@ function twoStationsSelected() {
 }
 
 function addStation(station) {
-    console.log('add', station)
     const p = document.getElementById(`station${selectedStations.length + 1}`)
-    p.innerHTML += station.name
+    p.innerHTML += `<strong style="color: ${getNodeColor(station.lines)}">${station.name}</strong>`
     selectedStations.push(station.station)
 }
 
 function removeStation(station) {
-    console.log('remove', station)
     const index = selectedStations.findIndex(s => s == station.station)
     selectedStations.splice(index, 1)
 
@@ -95,6 +93,7 @@ function getShortestPath(start, end) {
 }
 
 function clearSelectedPath() {
+    if(selectedStations.length == 0) return
     const selectedStationsCopy = Object.assign([], selectedStations)
     for(const stationName of selectedStationsCopy) {
         let station = stations.find(s => s.station == stationName)

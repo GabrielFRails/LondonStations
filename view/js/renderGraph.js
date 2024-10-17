@@ -14,7 +14,7 @@ const lineColors = {
 };
 
 async function getStations() {
-    return await fetch('../../stations.json')
+    return await fetch('/stations.json')
         .then(res => {
             return res.json()
         })

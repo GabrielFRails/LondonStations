@@ -32,7 +32,7 @@ def etl_get_stations():
     if not __stations:
         __stations = etl_generate_stations()
     
-    with open("stations.json", "w", encoding='utf-8') as out:
+    with open("view/stations.json", "w", encoding='utf-8') as out:
         json.dump(__stations, out, ensure_ascii=False, indent=4)
 
 etl_get_stations()

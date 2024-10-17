@@ -80,7 +80,6 @@ function getShortestPath(start, end) {
         if (!visited.has(node)) {
             visited.add(node);
 
-            console.log('node', node)
             for (const neighbor of node.neighbors) {
                 const neighStation = stations.find(s => s.station == neighbor)
                 const newPath = [...path, neighStation];

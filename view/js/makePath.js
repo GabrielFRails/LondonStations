@@ -101,6 +101,7 @@ function clearSelectedPath() {
         removeStation(station)
     }
     clearPath()
+    createSigmaInstance()
 }
 
 function clearPath() {

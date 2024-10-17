@@ -101,6 +101,8 @@ function clearSelectedPath() {
         removeStation(station)
     }
     clearPath()
+    const container = document.getElementById('graph-container');
+    container.innerHTML = ''
     createSigmaInstance()
 }
 

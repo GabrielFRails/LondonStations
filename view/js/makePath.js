@@ -27,9 +27,12 @@ function handleClick(node) {
         const start = stations.find(s => s.station == selectedStations[0])
         const end = stations.find(s => s.station == selectedStations[1])
 
-        const path = getShortestPath(start, end).map(n => n.name).join(' > ')
+        const path = getShortestPath(start, end).map(n => n.name)
+        const pathStr = path.join(' > ')
         const pathDiv = document.getElementById('path')
-        pathDiv.innerHTML = `<p>O caminho mais curto entre as estações selecionadas é: <br/> ${path}</p>`
+        pathDiv.innerHTML = `<p>O caminho mais curto entre as estações selecionadas é: <br/> ${pathStr}</p>`
+
+        highlightPath(path)
     }
 }
 
@@ -107,4 +110,25 @@ function clearPath() {
 
 function createEventListeners() {
     getClickEvents()
+}
+
+function highlightPath(path) {
+    graph.forEachNode((node) => {
+        const label = graph.getNodeAttribute(node, 'label');
+        if (!path.includes(label)) {
+            graph.updateNodeAttribute(node, 'color', () => '#eeeeee'); // Destaca em vermelho os do caminho
+        }
+    });
+
+    graph.forEachEdge((edge) => {
+        const sourceLabel = graph.getNodeAttribute(graph.source(edge), 'label');
+        const targetLabel = graph.getNodeAttribute(graph.target(edge), 'label');
+
+        // Verifica se ambos os nós da aresta estão no caminho mais curto
+        if (!(path.includes(sourceLabel) && path.includes(targetLabel))) {
+            graph.updateEdgeAttribute(edge, 'color', () => '#eeeeee'); // Destaca em vermelho
+        }
+    });
+
+    renderer.refresh()
 }

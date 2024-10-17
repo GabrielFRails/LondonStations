@@ -12,7 +12,7 @@
 
 1. definição de duas ou mais perguntas que devem ser respondidas pela sua visualização;
 	- Quantas linhas cada estação pertence?
-	- Dada duas estações, quais são os caminhos possíveis entre essas duas?
+	- Dada duas estações, qual o caminho mais curto entre elas?
 2. escolha da técnica de visualização a ser utilizada;
 	- grafo
 3. análise e discussão de quais atributos serão usados com uma justificativa para a seleção e deleção de cada um;
@@ -23,6 +23,8 @@
 	- Propriedade: cor
 	- Elas servem para que a pessoa consiga visualizar e associar as informações sobre as estações e suas linhas a partir das leis de gestalt como semelhança e proximidade.
 5. discussão e definição das interações promovidas pelas visualizações, se houver.
-	- ao selecionar duas estações os caminhos possíveis entre elas é destacado/sugerido
+	- Ao colocar o mouse sobre um nó ele destaca o nome da estação(caso o zoom esteja pequeno, apenas o nome da estação aparece)
+	- ao selecionar duas estações o caminho mais curto entre elas é exibido de forma escrita e o caminho é destacado no grafo a partir diminuição do destaque das estações não selecionadas 
+	- Existe o botão "Limpar seleção" que limpa o as estações escolhidas
 
 obs.: a pergunta 2 da Etapa 2 foi respondida na pergunta 5 da Etapa 2

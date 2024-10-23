@@ -1,5 +1,5 @@
-python libetl.py
+python3 libetl.py
 
 cd view
 
-python -m http.server
+python3 -m http.server

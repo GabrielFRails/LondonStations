@@ -6,7 +6,7 @@
 - Gabriel Freitas
 
 ## Para executar o programa faça:
- - Acesse a pasta do projeto e execute o script `exec.sh` (Linux) ou `exec.bat` (Windows) - é necessário possuir o Python instalado
+ - Acesse a pasta do projeto e execute o script `bash exec.sh` (Linux) ou `make runlocal` ou `exec.bat` (Windows) - é necessário possuir o Python instalado
  - Também foi disponibilizado um Dockerfile caso prefira realizar a execução via Docker
  - Após a execução dos scripts, acesse `http://localhost:8000`
 

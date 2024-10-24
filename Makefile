@@ -16,3 +16,6 @@ refresh:
 buildrun: build run
 
 restart: stop buildrun
+
+runlocal:
+	bash exec.sh

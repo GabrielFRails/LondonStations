@@ -1,9 +1,9 @@
 # Atividade 08 - Visualização de Informação (LondonStations)
 
 ## Alunos
-- Tallya Jesus
-- Luiza Costa
-- Gabriel Freitas
+- Tallya Jesus - 202003616
+- Luiza Costa - 201904239
+- Gabriel Freitas - 202003564
 
 ## Para executar o programa faça:
  - Acesse a pasta do projeto e execute o script `bash exec.sh` (Linux) ou `make runlocal` ou `exec.bat` (Windows) - é necessário possuir o Python instalado

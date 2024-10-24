@@ -2,7 +2,7 @@ build:
 	docker build -t spmetro .
 
 run:
-	docker run --rm -d --name spmmetro-container spmetro
+	docker run --rm -d -p 8000:8000 --name spmmetro-container spmetro
 
 stop:
 	docker stop spmmetro-container

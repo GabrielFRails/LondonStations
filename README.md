@@ -1,4 +1,4 @@
-# Atividade 08 - Visualização de Informação (LondonStations)
+# Atividade 08 - Visualização de Informação (SPStations)
 
 ## Alunos
 - Tallya Jesus - 202003616

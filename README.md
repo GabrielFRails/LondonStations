@@ -30,3 +30,4 @@
 	- Existe o botão "Limpar seleção" que limpa o as estações escolhidas
 
 obs.: a pergunta 2 da Etapa 2 foi respondida na pergunta 5 da Etapa 2
+obs.: a pergunta 3 da Etapa 2 é respondida no interação
